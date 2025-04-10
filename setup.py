@@ -1,8 +1,8 @@
-from setuptools import setup, find_packages
+from setuptools import Require, setup, find_packages
 
 setup(
   name='midoghanam',
-  version='0.0.1',
+  version='0.0.2',
   author='Mohamed Ahmed Ghanam',
   author_email='mghanam883@outlook.com',
   description='مكتبتي الشخصية – midoghanam',
@@ -15,5 +15,9 @@ setup(
     'License :: OSI Approved :: MIT License',
     'Operating System :: OS Independent',
   ],
+  install_requires=[
+    'requests',
+  ],
+  password="Moh@2009@",
   python_requires='>=3.6',
 )
