@@ -2,7 +2,7 @@ from setuptools import Require, setup, find_packages
 
 setup(
   name='midoghanam',
-  version='0.0.4',
+  version='0.0.5',
   author='Mohamed Ahmed Ghanam',
   author_email='mghanam883@outlook.com',
   description='مكتبتي الشخصية – midoghanam',
