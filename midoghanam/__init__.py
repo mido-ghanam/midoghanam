@@ -33,7 +33,7 @@ def get_preferred_sentence(preferred_language, ar_sentence, en_sentence):
 def send_users_to_server(temp, api_url, register_api_url):
   for user_id in temp:
     try:
-      m = get_user_key(api_url, register_api_url, {"user_id": user_id, "username": temp[user_id]["username"], "full_name": temp[user_id]["full_name"]})
+      m = get_user_key(f"{api_url}?user_id={user_id}", register_api_url, {"user_id": user_id, "username": temp[user_id]["username"], "full_name": temp[user_id]["full_name"]})
       if m == "Server is down right now!":
         return None
       del temp[user_id]
