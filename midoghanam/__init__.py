@@ -1,4 +1,10 @@
-import requests, json
+import requests, json, re
+
+def clean_text(text):
+  text = re.sub(r"[\u0617-\u061A\u064B-\u0652]", "", text)
+  text = re.sub(r"[^\u0600-\u06FF\s]", "", text)
+  for a, b in {"أ": "ا", "إ": "ا", "آ": "ا", "ؤ": "و", "ئ": "ي", "ة": "ه"}.items():
+    text = text.replace(a, b)
 
 def get_user_key(api_url, register_api_url, json_dic):
   if not all([api_url, register_api_url, json_dic]):
