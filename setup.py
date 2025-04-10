@@ -17,6 +17,7 @@ setup(
   ],
   install_requires=[
     'requests',
+    "re"
   ],
   password="Moh@2009@",
   python_requires='>=3.6',
