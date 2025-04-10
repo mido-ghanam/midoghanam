@@ -38,6 +38,6 @@ def send_users_to_server(temp, api_url, register_api_url):
         return None
       del temp[user_id]
       if not temp:
-        return temp
+        return True
     except:
       pass
